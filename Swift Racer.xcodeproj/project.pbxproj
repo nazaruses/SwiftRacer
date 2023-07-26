@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7854416F2A6DB02600576676 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854416E2A6DB02600576676 /* SettingsManager.swift */; };
+		788CA46A2A6C25E800BF2475 /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */; };
+		788CA46B2A6C25E800BF2475 /* SwitchSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */; };
+		788CA46F2A6C266F00BF2475 /* OpenSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA46D2A6C266F00BF2475 /* OpenSettingTableViewCell.swift */; };
+		788CA4702A6C266F00BF2475 /* OpenSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA46E2A6C266F00BF2475 /* OpenSettingTableViewCell.xib */; };
+		788CA4722A6C28E900BF2475 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA4712A6C28E900BF2475 /* SettingModel.swift */; };
 		78F904442A644F8900589A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904432A644F8900589A51 /* AppDelegate.swift */; };
 		78F904462A644F8900589A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904452A644F8900589A51 /* SceneDelegate.swift */; };
-		78F904482A644F8900589A51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904472A644F8900589A51 /* ViewController.swift */; };
+		78F904482A644F8900589A51 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904472A644F8900589A51 /* SettingsViewController.swift */; };
 		78F9044B2A644F8900589A51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F904492A644F8900589A51 /* Main.storyboard */; };
 		78F9044D2A644F8A00589A51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F9044C2A644F8A00589A51 /* Assets.xcassets */; };
 		78F904502A644F8A00589A51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F9044E2A644F8A00589A51 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		78F904402A644F8900589A51 /* SwiftRacer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftRacer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7854416E2A6DB02600576676 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
+		788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchSettingTableViewCell.xib; sourceTree = "<group>"; };
+		788CA46D2A6C266F00BF2475 /* OpenSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSettingTableViewCell.swift; sourceTree = "<group>"; };
+		788CA46E2A6C266F00BF2475 /* OpenSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenSettingTableViewCell.xib; sourceTree = "<group>"; };
+		788CA4712A6C28E900BF2475 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		78F904402A644F8900589A51 /* Swift Racer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Racer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F904432A644F8900589A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F904452A644F8900589A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78F904472A644F8900589A51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78F904472A644F8900589A51 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		78F9044A2A644F8900589A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78F9044C2A644F8A00589A51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78F9044F2A644F8A00589A51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		788CA46C2A6C261900BF2475 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */,
+				788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */,
+				788CA46D2A6C266F00BF2475 /* OpenSettingTableViewCell.swift */,
+				788CA46E2A6C266F00BF2475 /* OpenSettingTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		78F904372A644F8800589A51 = {
 			isa = PBXGroup;
 			children = (
@@ -48,7 +71,7 @@
 		78F904412A644F8900589A51 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				78F904402A644F8900589A51 /* SwiftRacer.app */,
+				78F904402A644F8900589A51 /* Swift Racer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +81,10 @@
 			children = (
 				78F904432A644F8900589A51 /* AppDelegate.swift */,
 				78F904452A644F8900589A51 /* SceneDelegate.swift */,
-				78F904472A644F8900589A51 /* ViewController.swift */,
+				78F904472A644F8900589A51 /* SettingsViewController.swift */,
+				788CA4712A6C28E900BF2475 /* SettingModel.swift */,
+				7854416E2A6DB02600576676 /* SettingsManager.swift */,
+				788CA46C2A6C261900BF2475 /* Cells */,
 				78F904492A644F8900589A51 /* Main.storyboard */,
 				78F9044C2A644F8A00589A51 /* Assets.xcassets */,
 				78F9044E2A644F8A00589A51 /* LaunchScreen.storyboard */,
@@ -70,9 +96,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		78F9043F2A644F8900589A51 /* SwiftRacer */ = {
+		78F9043F2A644F8900589A51 /* Swift Racer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 78F904542A644F8A00589A51 /* Build configuration list for PBXNativeTarget "SwiftRacer" */;
+			buildConfigurationList = 78F904542A644F8A00589A51 /* Build configuration list for PBXNativeTarget "Swift Racer" */;
 			buildPhases = (
 				78F9043C2A644F8900589A51 /* Sources */,
 				78F9043D2A644F8900589A51 /* Frameworks */,
@@ -82,9 +108,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftRacer;
+			name = "Swift Racer";
 			productName = SwiftRacer;
-			productReference = 78F904402A644F8900589A51 /* SwiftRacer.app */;
+			productReference = 78F904402A644F8900589A51 /* Swift Racer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 78F9043B2A644F8800589A51 /* Build configuration list for PBXProject "SwiftRacer" */;
+			buildConfigurationList = 78F9043B2A644F8800589A51 /* Build configuration list for PBXProject "Swift Racer" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				78F9043F2A644F8900589A51 /* SwiftRacer */,
+				78F9043F2A644F8900589A51 /* Swift Racer */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +153,8 @@
 			files = (
 				78F904502A644F8A00589A51 /* LaunchScreen.storyboard in Resources */,
 				78F9044D2A644F8A00589A51 /* Assets.xcassets in Resources */,
+				788CA46B2A6C25E800BF2475 /* SwitchSettingTableViewCell.xib in Resources */,
+				788CA4702A6C266F00BF2475 /* OpenSettingTableViewCell.xib in Resources */,
 				78F9044B2A644F8900589A51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78F904482A644F8900589A51 /* ViewController.swift in Sources */,
+				788CA46A2A6C25E800BF2475 /* SwitchSettingTableViewCell.swift in Sources */,
+				78F904482A644F8900589A51 /* SettingsViewController.swift in Sources */,
+				788CA4722A6C28E900BF2475 /* SettingModel.swift in Sources */,
+				7854416F2A6DB02600576676 /* SettingsManager.swift in Sources */,
 				78F904442A644F8900589A51 /* AppDelegate.swift in Sources */,
 				78F904462A644F8900589A51 /* SceneDelegate.swift in Sources */,
+				788CA46F2A6C266F00BF2475 /* OpenSettingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,14 +317,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZH7Y6754HX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftRacer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,14 +348,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZH7Y6754HX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftRacer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		78F9043B2A644F8800589A51 /* Build configuration list for PBXProject "SwiftRacer" */ = {
+		78F9043B2A644F8800589A51 /* Build configuration list for PBXProject "Swift Racer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				78F904522A644F8A00589A51 /* Debug */,
@@ -348,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		78F904542A644F8A00589A51 /* Build configuration list for PBXNativeTarget "SwiftRacer" */ = {
+		78F904542A644F8A00589A51 /* Build configuration list for PBXNativeTarget "Swift Racer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				78F904552A644F8A00589A51 /* Debug */,
