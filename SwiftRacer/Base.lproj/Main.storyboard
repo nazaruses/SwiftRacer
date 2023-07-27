@@ -15,6 +15,15 @@
                     <view key="view" contentMode="scaleToFill" id="dKZ-Xb-TO4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Side menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAd-wN-Wol">
+                                <rect key="frame" x="156" y="132" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mST-Io-uFE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -22,7 +31,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NI1-ya-rD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1382" y="658"/>
+            <point key="canvasLocation" x="-1382.4427480916031" y="705.63380281690149"/>
         </scene>
         <!--Settings-->
         <scene sceneID="tne-QT-ifu">
@@ -92,30 +101,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP0-XV-3ME">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="O6j-WP-fly">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP0-XV-3ME">
                                 <rect key="frame" x="106.66666666666669" y="381" width="180" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="YF8-QO-ocV"/>
                                     <constraint firstAttribute="width" constant="180" id="qgq-TR-Kyh"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="tintColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start!">
+                                    <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="53"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="KNj-Ya-q2V" kind="show" id="bJf-lE-3c9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-OW-r0F">
-                                <rect key="frame" x="118" y="501" width="157" height="56"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <rect key="frame" x="114.66666666666669" y="771" width="164" height="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Statistics">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="35"/>
+                                <buttonConfiguration key="configuration" style="plain" image="medal.fill" catalog="system" title="Statistics">
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="30"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="EGJ-BS-gcD" kind="show" id="fDy-kg-7Ny"/>
+                                    <segue destination="NgI-K9-cNV" kind="show" id="zxT-nQ-D8S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,12 +137,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PP0-XV-3ME" firstAttribute="centerX" secondItem="xhG-cC-Ach" secondAttribute="centerX" id="BgW-Gn-1bn"/>
-                            <constraint firstItem="QKr-OW-r0F" firstAttribute="top" secondItem="PP0-XV-3ME" secondAttribute="bottom" constant="30" id="kzh-7q-Jk3"/>
+                            <constraint firstItem="QKr-OW-r0F" firstAttribute="top" secondItem="PP0-XV-3ME" secondAttribute="bottom" constant="300" id="kzh-7q-Jk3"/>
                             <constraint firstItem="QKr-OW-r0F" firstAttribute="centerX" secondItem="xhG-cC-Ach" secondAttribute="centerX" id="nkT-yU-2uU"/>
                             <constraint firstItem="PP0-XV-3ME" firstAttribute="centerY" secondItem="xhG-cC-Ach" secondAttribute="centerY" id="vsQ-lj-RJw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Swift Racer" id="D3v-FO-G4O">
+                    <navigationItem key="navigationItem" title="Swift Racer" largeTitleDisplayMode="never" id="D3v-FO-G4O">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="kwH-Zu-kpN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="dqf-M8-PM3">
                                 <rect key="frame" x="16" y="4.6666666666666679" width="87" height="35"/>
@@ -157,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xW4-4D-Y2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615" y="-27"/>
+            <point key="canvasLocation" x="-616.03053435114498" y="-27.464788732394368"/>
         </scene>
         <!--Swift Racer-->
         <scene sceneID="T30-Xf-Ucg">
@@ -191,7 +205,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twu-AB-MBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="658"/>
+            <point key="canvasLocation" x="1731" y="723"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="bdb-di-MXO">
+            <objects>
+                <tableViewController id="NgI-K9-cNV" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Fq7-Lx-uPz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wcm-7L-S3F">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wcm-7L-S3F" id="tn1-Fa-O9R">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NgI-K9-cNV" id="yrP-RH-UUX"/>
+                            <outlet property="delegate" destination="NgI-K9-cNV" id="Gxb-w4-CE0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Statistics" id="dia-lo-y1q"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRQ-PX-q9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163" y="706"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y2G-Av-IKE">
@@ -211,16 +254,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image 1" width="3973" height="5959"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="medal.fill" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
