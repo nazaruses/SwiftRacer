@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Side menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAd-wN-Wol">
-                                <rect key="frame" x="156" y="132" width="81" height="21"/>
+                                <rect key="frame" x="33" y="53" width="190" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,27 +42,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mzj-vN-RII">
-                                <rect key="frame" x="0.0" y="16" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="16" width="393" height="735.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7y-Ef-e55">
-                                <rect key="frame" x="204.66666666666663" y="747" width="172.33333333333337" height="55"/>
+                                <rect key="frame" x="204.66666666666663" y="767.66666666666663" width="172.33333333333337" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <string key="title">Сохранить
-изменения</string>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="filled" title="Save changes"/>
                                 <connections>
                                     <action selector="saveChanges:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tpp-JN-UIb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgV-4p-F0I">
-                                <rect key="frame" x="16" y="747" width="172.66666666666666" height="55"/>
+                                <rect key="frame" x="16" y="767.66666666666663" width="172.66666666666666" height="34.333333333333371"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <string key="title">Отменить
-изменения</string>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="tinted" title="Сancel changes"/>
                                 <connections>
                                     <action selector="cancelChanges:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOf-jt-OZZ"/>
                                 </connections>
@@ -91,17 +86,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-616" y="706"/>
+            <point key="canvasLocation" x="-616" y="723"/>
         </scene>
         <!--Swift Racer-->
         <scene sceneID="UnR-K8-RgL">
             <objects>
-                <viewController id="hlF-6y-fVZ" sceneMemberID="viewController">
+                <viewController id="hlF-6y-fVZ" customClass="MainViewController" customModule="Swift_Racer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xhG-cC-Ach">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="O6j-WP-fly">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Main" translatesAutoresizingMaskIntoConstraints="NO" id="O6j-WP-fly">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -118,18 +113,17 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="53"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="KNj-Ya-q2V" kind="show" id="bJf-lE-3c9"/>
+                                    <action selector="startRace:" destination="hlF-6y-fVZ" eventType="touchUpInside" id="eTH-ui-XZz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-OW-r0F">
-                                <rect key="frame" x="114.66666666666669" y="771" width="164" height="50"/>
+                                <rect key="frame" x="136" y="751" width="121.33333333333331" height="32.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="medal.fill" catalog="system" title="Statistics">
-                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="30"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Statistics" image="medal.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="NgI-K9-cNV" kind="show" id="zxT-nQ-D8S"/>
+                                    <segue destination="NgI-K9-cNV" kind="showDetail" id="qzy-uS-MFX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,7 +131,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PP0-XV-3ME" firstAttribute="centerX" secondItem="xhG-cC-Ach" secondAttribute="centerX" id="BgW-Gn-1bn"/>
-                            <constraint firstItem="QKr-OW-r0F" firstAttribute="top" secondItem="PP0-XV-3ME" secondAttribute="bottom" constant="300" id="kzh-7q-Jk3"/>
+                            <constraint firstItem="QKr-OW-r0F" firstAttribute="top" secondItem="PP0-XV-3ME" secondAttribute="bottom" constant="280" id="kzh-7q-Jk3"/>
                             <constraint firstItem="QKr-OW-r0F" firstAttribute="centerX" secondItem="xhG-cC-Ach" secondAttribute="centerX" id="nkT-yU-2uU"/>
                             <constraint firstItem="PP0-XV-3ME" firstAttribute="centerY" secondItem="xhG-cC-Ach" secondAttribute="centerY" id="vsQ-lj-RJw"/>
                         </constraints>
@@ -180,6 +174,12 @@
                     <view key="view" contentMode="scaleToFill" id="F15-Ja-W30">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Road" translatesAutoresizingMaskIntoConstraints="NO" id="JQx-6s-ea0">
+                                <rect key="frame" x="0.0" y="-9" width="393" height="861"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RwQ-4h-Wqb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgQ-nr-5so" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163" y="-27"/>
+            <point key="canvasLocation" x="162.59541984732823" y="-27.464788732394368"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="59q-4c-R55">
@@ -212,9 +212,10 @@
             <objects>
                 <tableViewController id="NgI-K9-cNV" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Fq7-Lx-uPz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wcm-7L-S3F">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -254,7 +255,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image 1" width="3973" height="5959"/>
+        <image name="Main" width="3973" height="5959"/>
+        <image name="Road" width="1179" height="2556"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="medal.fill" catalog="system" width="121" height="128"/>
@@ -263,6 +265,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
