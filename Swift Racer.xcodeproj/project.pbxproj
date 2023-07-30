@@ -10,12 +10,16 @@
 		780570622A75803A0053FCC3 /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780570602A75803A0053FCC3 /* RaceViewController.swift */; };
 		780570632A75803A0053FCC3 /* RaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 780570612A75803A0053FCC3 /* RaceViewController.xib */; };
 		780570652A7582B30053FCC3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780570642A7582B30053FCC3 /* MainViewController.swift */; };
+		7806D0E42A75DE3F0058346E /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806D0E22A75DE3F0058346E /* StatisticsTableViewCell.swift */; };
+		7806D0E52A75DE3F0058346E /* StatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7806D0E32A75DE3F0058346E /* StatisticsTableViewCell.xib */; };
+		7806D0E72A75E0AE0058346E /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806D0E62A75E0AE0058346E /* StatisticsViewController.swift */; };
 		7854416F2A6DB02600576676 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854416E2A6DB02600576676 /* SettingsManager.swift */; };
 		788CA46A2A6C25E800BF2475 /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */; };
 		788CA46B2A6C25E800BF2475 /* SwitchSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */; };
 		788CA46F2A6C266F00BF2475 /* OpenSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA46D2A6C266F00BF2475 /* OpenSettingTableViewCell.swift */; };
 		788CA4702A6C266F00BF2475 /* OpenSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA46E2A6C266F00BF2475 /* OpenSettingTableViewCell.xib */; };
 		788CA4722A6C28E900BF2475 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA4712A6C28E900BF2475 /* SettingModel.swift */; };
+		788D808A2A76ADC2003FB66A /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D80892A76ADC2003FB66A /* SideMenuViewController.swift */; };
 		78F904442A644F8900589A51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904432A644F8900589A51 /* AppDelegate.swift */; };
 		78F904462A644F8900589A51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904452A644F8900589A51 /* SceneDelegate.swift */; };
 		78F904482A644F8900589A51 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F904472A644F8900589A51 /* SettingsViewController.swift */; };
@@ -28,12 +32,16 @@
 		780570602A75803A0053FCC3 /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		780570612A75803A0053FCC3 /* RaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaceViewController.xib; sourceTree = "<group>"; };
 		780570642A7582B30053FCC3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7806D0E22A75DE3F0058346E /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		7806D0E32A75DE3F0058346E /* StatisticsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsTableViewCell.xib; sourceTree = "<group>"; };
+		7806D0E62A75E0AE0058346E /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		7854416E2A6DB02600576676 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
 		788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchSettingTableViewCell.xib; sourceTree = "<group>"; };
 		788CA46D2A6C266F00BF2475 /* OpenSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSettingTableViewCell.swift; sourceTree = "<group>"; };
 		788CA46E2A6C266F00BF2475 /* OpenSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenSettingTableViewCell.xib; sourceTree = "<group>"; };
 		788CA4712A6C28E900BF2475 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		788D80892A76ADC2003FB66A /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		78F904402A644F8900589A51 /* Swift Racer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Racer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F904432A644F8900589A51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F904452A644F8900589A51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +82,12 @@
 		7812E1B52A74043F00C0318D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				78F904432A644F8900589A51 /* AppDelegate.swift */,
+				78F904452A644F8900589A51 /* SceneDelegate.swift */,
 				78F904492A644F8900589A51 /* Main.storyboard */,
 				78F9044C2A644F8A00589A51 /* Assets.xcassets */,
 				78F9044E2A644F8A00589A51 /* LaunchScreen.storyboard */,
+				78F904512A644F8A00589A51 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -84,12 +95,23 @@
 		7812E1B62A7404AC00C0318D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				788D80892A76ADC2003FB66A /* SideMenuViewController.swift */,
 				780570642A7582B30053FCC3 /* MainViewController.swift */,
 				78F904472A644F8900589A51 /* SettingsViewController.swift */,
 				780570602A75803A0053FCC3 /* RaceViewController.swift */,
 				780570612A75803A0053FCC3 /* RaceViewController.xib */,
+				7806D0E62A75E0AE0058346E /* StatisticsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		783154222A767FAF005CE4AC /* StatisticsCell */ = {
+			isa = PBXGroup;
+			children = (
+				7806D0E22A75DE3F0058346E /* StatisticsTableViewCell.swift */,
+				7806D0E32A75DE3F0058346E /* StatisticsTableViewCell.xib */,
+			);
+			path = StatisticsCell;
 			sourceTree = "<group>";
 		};
 		788CA46C2A6C261900BF2475 /* Cells */ = {
@@ -99,6 +121,7 @@
 				788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */,
 				788CA46D2A6C266F00BF2475 /* OpenSettingTableViewCell.swift */,
 				788CA46E2A6C266F00BF2475 /* OpenSettingTableViewCell.xib */,
+				783154222A767FAF005CE4AC /* StatisticsCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -122,14 +145,11 @@
 		78F904422A644F8900589A51 /* SwiftRacer */ = {
 			isa = PBXGroup;
 			children = (
-				78F904432A644F8900589A51 /* AppDelegate.swift */,
-				78F904452A644F8900589A51 /* SceneDelegate.swift */,
-				7812E1B62A7404AC00C0318D /* Controllers */,
 				7812E1B32A7403FB00C0318D /* Services */,
 				7812E1B22A7403DE00C0318D /* Models */,
+				7812E1B62A7404AC00C0318D /* Controllers */,
 				788CA46C2A6C261900BF2475 /* Cells */,
 				7812E1B52A74043F00C0318D /* Resources */,
-				78F904512A644F8A00589A51 /* Info.plist */,
 			);
 			path = SwiftRacer;
 			sourceTree = "<group>";
@@ -197,6 +217,7 @@
 				788CA46B2A6C25E800BF2475 /* SwitchSettingTableViewCell.xib in Resources */,
 				788CA4702A6C266F00BF2475 /* OpenSettingTableViewCell.xib in Resources */,
 				78F9044B2A644F8900589A51 /* Main.storyboard in Resources */,
+				7806D0E52A75DE3F0058346E /* StatisticsTableViewCell.xib in Resources */,
 				780570632A75803A0053FCC3 /* RaceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,10 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7806D0E42A75DE3F0058346E /* StatisticsTableViewCell.swift in Sources */,
 				788CA46A2A6C25E800BF2475 /* SwitchSettingTableViewCell.swift in Sources */,
+				788D808A2A76ADC2003FB66A /* SideMenuViewController.swift in Sources */,
 				78F904482A644F8900589A51 /* SettingsViewController.swift in Sources */,
 				788CA4722A6C28E900BF2475 /* SettingModel.swift in Sources */,
 				7854416F2A6DB02600576676 /* SettingsManager.swift in Sources */,
+				7806D0E72A75E0AE0058346E /* StatisticsViewController.swift in Sources */,
 				78F904442A644F8900589A51 /* AppDelegate.swift in Sources */,
 				780570622A75803A0053FCC3 /* RaceViewController.swift in Sources */,
 				780570652A7582B30053FCC3 /* MainViewController.swift in Sources */,
@@ -366,7 +390,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZH7Y6754HX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftRacer/Info.plist;
+				INFOPLIST_FILE = SwiftRacer/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -397,7 +421,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZH7Y6754HX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SwiftRacer/Info.plist;
+				INFOPLIST_FILE = SwiftRacer/Resources/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.action-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
