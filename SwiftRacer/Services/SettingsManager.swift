@@ -22,7 +22,10 @@ class SettingsManager {
                 settingValue: "Cars"),
         Setting(settingName: "Car Color",
                 type: .openSetting,
-                settingValue: "Red")
+                settingValue: "Red"),
+        Setting(settingName: "User Name",
+                type: .stringSetting,
+                settingValue: "Your Name")
     ]
     
 }

@@ -44,7 +44,18 @@ class SettingsViewController: UIViewController {
     @IBAction func saveChanges(_ sender: Any) {
         previousSettings = settings
         SettingsManager.shared.settings = settings
-
+        
+        settings.forEach { setting in
+            if setting.settingName == "User Name" {
+               
+                NotificationCenter.default.post(
+                    name: NSNotification.Name("updateUserName"),
+                    object: nil,
+                    userInfo: ["username": setting.settingValue]
+                )
+                
+            }
+        }
         tableView.reloadData()
         
     }
@@ -79,6 +90,55 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let index = indexPath.row
+        
+        switch settings[index].type {
+        case .switchSetting:
+            guard let cell = tableView.cellForRow(at: indexPath) as? SwitchSettingTableViewCell else { return }
+            cell.`switch`.isOn.toggle()
+            cell.switchChanged(self)
+        case .stringSetting:
+            var placeholder = settings[index].settingName
+            if let value = settings[index].settingValue as? String,
+               value.count > 0 {
+                placeholder = value
+            }
+            presentAlert(
+                title: "Hello",
+                message: "Input \(settings[index].settingName)",
+                placeholder: placeholder
+            ) { [weak self] input in
+                self?.settings[index].settingValue = input
+                
+            }
+        case .openSetting:
+            self.present(UIViewController(), animated: true)
+        }
+    }
+    private func presentAlert(
+        title: String,
+        message: String,
+        placeholder: String = "",
+        handler: ((String) -> ())? = nil
+    ) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addTextField { textfield in
+            textfield.placeholder = placeholder
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            guard let text = alert.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines), text.count > 0 else { return }
+            handler?(text)
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
     }
 }
     extension SettingsViewController: SwitchSettingDelegate {
