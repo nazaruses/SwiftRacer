@@ -13,6 +13,8 @@
 		7806D0E42A75DE3F0058346E /* StatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806D0E22A75DE3F0058346E /* StatisticsTableViewCell.swift */; };
 		7806D0E52A75DE3F0058346E /* StatisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7806D0E32A75DE3F0058346E /* StatisticsTableViewCell.xib */; };
 		7806D0E72A75E0AE0058346E /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7806D0E62A75E0AE0058346E /* StatisticsViewController.swift */; };
+		784DC54D2A9133D0004077D4 /* beer-money12.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 784DC54C2A9133D0004077D4 /* beer-money12.ttf */; };
+		784DC54F2A914166004077D4 /* UserDefaults+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784DC54E2A914166004077D4 /* UserDefaults+PropertyWrapper.swift */; };
 		7854416F2A6DB02600576676 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7854416E2A6DB02600576676 /* SettingsManager.swift */; };
 		788CA46A2A6C25E800BF2475 /* SwitchSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */; };
 		788CA46B2A6C25E800BF2475 /* SwitchSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */; };
@@ -35,6 +37,8 @@
 		7806D0E22A75DE3F0058346E /* StatisticsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTableViewCell.swift; sourceTree = "<group>"; };
 		7806D0E32A75DE3F0058346E /* StatisticsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsTableViewCell.xib; sourceTree = "<group>"; };
 		7806D0E62A75E0AE0058346E /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		784DC54C2A9133D0004077D4 /* beer-money12.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "beer-money12.ttf"; sourceTree = "<group>"; };
+		784DC54E2A914166004077D4 /* UserDefaults+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+PropertyWrapper.swift"; sourceTree = "<group>"; };
 		7854416E2A6DB02600576676 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		788CA4682A6C25E800BF2475 /* SwitchSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingTableViewCell.swift; sourceTree = "<group>"; };
 		788CA4692A6C25E800BF2475 /* SwitchSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchSettingTableViewCell.xib; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				7854416E2A6DB02600576676 /* SettingsManager.swift */,
+				784DC54E2A914166004077D4 /* UserDefaults+PropertyWrapper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 		7812E1B52A74043F00C0318D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				783B24292A912FDF0086145A /* Fonts */,
 				78F904432A644F8900589A51 /* AppDelegate.swift */,
 				78F904452A644F8900589A51 /* SceneDelegate.swift */,
 				78F904492A644F8900589A51 /* Main.storyboard */,
@@ -112,6 +118,14 @@
 				7806D0E32A75DE3F0058346E /* StatisticsTableViewCell.xib */,
 			);
 			path = StatisticsCell;
+			sourceTree = "<group>";
+		};
+		783B24292A912FDF0086145A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				784DC54C2A9133D0004077D4 /* beer-money12.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		788CA46C2A6C261900BF2475 /* Cells */ = {
@@ -214,6 +228,7 @@
 			files = (
 				78F904502A644F8A00589A51 /* LaunchScreen.storyboard in Resources */,
 				78F9044D2A644F8A00589A51 /* Assets.xcassets in Resources */,
+				784DC54D2A9133D0004077D4 /* beer-money12.ttf in Resources */,
 				788CA46B2A6C25E800BF2475 /* SwitchSettingTableViewCell.xib in Resources */,
 				788CA4702A6C266F00BF2475 /* OpenSettingTableViewCell.xib in Resources */,
 				78F9044B2A644F8900589A51 /* Main.storyboard in Resources */,
@@ -240,6 +255,7 @@
 				780570622A75803A0053FCC3 /* RaceViewController.swift in Sources */,
 				780570652A7582B30053FCC3 /* MainViewController.swift in Sources */,
 				78F904462A644F8900589A51 /* SceneDelegate.swift in Sources */,
+				784DC54F2A914166004077D4 /* UserDefaults+PropertyWrapper.swift in Sources */,
 				788CA46F2A6C266F00BF2475 /* OpenSettingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

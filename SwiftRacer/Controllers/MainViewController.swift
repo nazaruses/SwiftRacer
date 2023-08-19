@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        greetingLabel.text = "Hi, \(SettingsManager.shared.userName)!"
+        
         NotificationCenter.default.addObserver(
             self,
             selector:#selector(updateUserName(_:)),

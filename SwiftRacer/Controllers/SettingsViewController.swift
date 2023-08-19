@@ -10,16 +10,18 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-  
-    var previousSettings = SettingsManager.shared.settings
-    lazy var settings: [Setting] = previousSettings
+    
+    let settingsList = ["Music", "Sound", "Obstacles", "Car Color", "User Name"]
+    let isSwitchSetting = [true, true, false, false, false]
+    
+    lazy var settings: SettingsManager = SettingsManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       setupTable()
+        setupTable()
     }
-
+    
     private func setupTable() {
         registerCells()
         
@@ -28,34 +30,21 @@ class SettingsViewController: UIViewController {
     }
     
     private func registerCells() {
-        let switchSettingsNib = UINib(nibName: "SwitchSettingTableViewCell", bundle: Bundle.main)
-        tableView.register(switchSettingsNib, forCellReuseIdentifier: "switchSettingCell")
+        let switchSettingNib = UINib(nibName: "SwitchSettingTableViewCell", bundle: Bundle.main)
+        tableView.register(switchSettingNib, forCellReuseIdentifier: "switchSettingCell")
         
-        let openSettingsNib = UINib(nibName: "OpenSettingTableViewCell", bundle: Bundle.main)
-        tableView.register(openSettingsNib, forCellReuseIdentifier: "openSettingCell")
+        let openSettingNib = UINib(nibName: "OpenSettingTableViewCell", bundle: Bundle.main)
+        tableView.register(openSettingNib, forCellReuseIdentifier: "openSettingCell")
     }
-    
     @IBAction func cancelChanges(_ sender: Any) {
-        settings = previousSettings
-        
+       
         tableView.reloadData()
         
         }
+    
     @IBAction func saveChanges(_ sender: Any) {
-        previousSettings = settings
-        SettingsManager.shared.settings = settings
+    
         
-        settings.forEach { setting in
-            if setting.settingName == "User Name" {
-               
-                NotificationCenter.default.post(
-                    name: NSNotification.Name("updateUserName"),
-                    object: nil,
-                    userInfo: ["username": setting.settingValue]
-                )
-                
-            }
-        }
         tableView.reloadData()
         
     }
@@ -66,18 +55,18 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { 1 }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        settings.count
+        settingsList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let index = indexPath.row
         
-        if settings[index].type == .switchSetting {
+        if isSwitchSetting[index] {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "switchSettingCell", for: indexPath) as? SwitchSettingTableViewCell else { return UITableViewCell() }
             
-            cell.settingName.text = settings[index].settingName
-            cell.`switch`.isOn = (settings[index].settingValue as? Bool) ?? false
+            cell.settingName.text = settingsList[index]
+            cell.`switch`.isOn = isOnSetting(withName: settingsList[index])
             cell.delegate = self
             
             return cell
@@ -86,7 +75,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "openSettingCell", for: indexPath) as? OpenSettingTableViewCell else { return UITableViewCell() }
             
-            cell.settingName.text = settings[index].settingName
+            cell.settingName.text = settingsList[index]
             
             return cell
         }
@@ -97,53 +86,103 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let index = indexPath.row
         
-        switch settings[index].type {
-        case .switchSetting:
+        if isSwitchSetting[index] {
             guard let cell = tableView.cellForRow(at: indexPath) as? SwitchSettingTableViewCell else { return }
             cell.`switch`.isOn.toggle()
-            cell.switchChanged(self)
-        case .stringSetting:
-            var placeholder = settings[index].settingName
-            if let value = settings[index].settingValue as? String,
-               value.count > 0 {
-                placeholder = value
+            toggleSetting(withName: settingsList[index])
+        } else if settingsList[index] == "User Name" {
+            var placeholder = "User Name"
+            if settings.userName.count > 0 {
+                placeholder = settings.userName
             }
             presentAlert(
                 title: "Hello",
-                message: "Input \(settings[index].settingName)",
+                message: "Input User Name",
                 placeholder: placeholder
             ) { [weak self] input in
-                self?.settings[index].settingValue = input
-                
+                guard input.count > 0 else { return }
+                self?.settings.userName = input
+                NotificationCenter.default.post(
+                    name: NSNotification.Name("updateUserName"),
+                    object: nil,
+                    userInfo: ["username": input]
+                )
             }
-        case .openSetting:
+        } else {
             self.present(UIViewController(), animated: true)
         }
     }
+    
     private func presentAlert(
         title: String,
         message: String,
         placeholder: String = "",
         handler: ((String) -> ())? = nil
     ) {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
         alert.addTextField { textfield in
             textfield.placeholder = placeholder
         }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            guard let text = alert.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines), text.count > 0 else { return }
-            handler?(text)
+            guard let text = alert.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                  text.count > 0 else { return }
+            
+            let filteredText = text // "text   text"
+                .components(separatedBy: CharacterSet.whitespacesAndNewlines) // ["text", "", "", "text"]
+                .filter { string in
+                    string.count > 0
+                } // ["text", "text"]
+                .joined(separator: " ") // "text text"
+            
+            handler?(filteredText)
         }
+        
         alert.addAction(cancelAction)
         alert.addAction(okAction)
         
         present(alert, animated: true)
     }
-}
-    extension SettingsViewController: SwitchSettingDelegate {
-        func cell(_ cell: SwitchSettingTableViewCell, changeValueTo isOn: Bool) {
-            guard let index = tableView.indexPath(for: cell)?.row else { return }
-            settings[index].settingValue = isOn
+    
+    private func isOnSetting(withName name: String) -> Bool {
+        switch name {
+        case "Music":
+            return settings.isMusicOn
+        case "Sound":
+            return settings.isSoundOn
+        default:
+            return false
         }
     }
+    
+    private func toggleSetting(withName name: String) {
+        switch name {
+        case "Music":
+            settings.isMusicOn.toggle()
+        case "Sound":
+            settings.isSoundOn.toggle()
+        default:
+            return
+        }
+    }
+    
+    private func SetSetting(withName name: String, to value: Bool) {
+        switch name {
+        case "Music":
+            settings.isMusicOn = value
+        case "Sound":
+            settings.isSoundOn = value
+        default:
+            return
+        }
+    }
+}
+
+extension SettingsViewController: SwitchSettingDelegate {
+    func cell(_ cell: SwitchSettingTableViewCell, changeValueTo isOn: Bool) {
+        guard let index = tableView.indexPath(for: cell)?.row else { return }
+        SetSetting(withName: settingsList[index], to: isOn)
+    }
+}
